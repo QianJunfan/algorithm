@@ -17,5 +17,6 @@ run: all
 
 clean:
 	rm -f $(TARGET)
+	cat log > README
 	# Clean up macOS Finder cruft
 	find . -type f -name '.DS_Store' -delete

@@ -8,7 +8,7 @@
 #define MAX_PATH_LEN                256
 #define MAX_PROBLEMS_PER_FILE       128
 #define MAX_PROBLEM_NAME_LEN        128
-#define LOG_FILENAME                "progress.log"
+#define LOG_FILENAME                "log"
 #define FILENAME_DATE_FORMAT_C      "%b_%d_%Y"
 
 struct problem {
