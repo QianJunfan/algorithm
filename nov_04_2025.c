@@ -1,3 +1,6 @@
+/*
+ */
+
 /* 0058 - length of last word (forward iteration)
  *      - from https://github.com/qianjunfan 
  */
