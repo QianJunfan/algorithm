@@ -15,6 +15,7 @@ Mon, Nov 24, 2025:
         0019 - remove nth node from end of list (review)
         0024 - swap nodes in pairs (cumbersome)
         0024 - swap nodes in pairs (iterative swapping / simple and neet)
+        0118 - pascals triangle
 
 Sun, Nov 23, 2025:
         "I've been very busy with other things, so I haven't done any leetcode
