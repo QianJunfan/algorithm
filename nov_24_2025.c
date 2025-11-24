@@ -149,6 +149,23 @@ int **generate(int num_rows, int *return_size, int **return_col_sizes)
 		*return_col_sizes = NULL;
 		return NULL;
 	}
+	int result  = (int **)malloc(sizeof(int *) * n);
+	*col = (int *)malloc(sizeof(int) * n);
+	(*col)[0] = 1;
+	result[0] = (int *)malloc(sizeof(int) * 1)
+	result[0][0] = 1;
+	if (n == 1)
+		return result;
+
+	for(int i = 1; i < n, i++) {
+		result[i] = (int *)malloc(sizeof(int) * (i + 1));
+		result[i][0] = 1;
+		result[i][i] = 1;
+		*col[i] = i + 1;
+		
+
+	}
+}
 	
 	*return_size = num_rows;
 	*return_col_sizes = (int *)malloc(num_rows * sizeof(int));
