@@ -64,3 +64,28 @@ char *longestCommonPrefix(char **s, int size)
 
 	return r;
 }
+
+
+/* lc0020 - valid parentheses */
+#include <stdbool.h>
+
+bool isValid(char *s)
+{
+	char st[10000];
+	int  p = 0;
+	
+	while (*s != '\0') {
+		if (*s == '(' || *s == '[' || *s == '{') 
+			st[p++] = *s;
+		else if ((*s == ')' || *s == ']' || *s == '}') 
+			&& p == 0)
+			break;
+		else if (*s == st[p-1] + 2 || *s == st[p-1] + 1) 
+			p--;
+		else
+			return false;
+		s++;
+	}
+	
+	return p == 0 ? true : false;
+}
