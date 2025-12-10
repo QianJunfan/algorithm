@@ -1,0 +1,43 @@
+/* Dec 11, 2025 
+ * I've spent too much time writing my window manager and haven't gotten around
+ * to doing any algorithmic problems.
+ * That's a sin...
+ * */
+
+/* lc0013 - roman to integer */
+int val(char r)
+{
+	switch(r) {
+		case 'I': return 1;
+		case 'V': return 5;
+		case 'X': return 10;
+		case 'L': return 50;
+		case 'C': return 100;
+		case 'D': return 500;
+		case 'M': return 1000;
+		default: return 0;
+	}
+}
+int romanToInt (char *s)
+{
+	int r = 0;
+	int len = strlen(s);
+
+	for (int i = 0; i < len; i++) {
+		int s1 = val(s[i]);
+
+		if (i + 1 < len) {
+			int s2 = val(s[i+1]);
+			if (s1 < s2)
+				r -= s1;
+			else
+				r += s1;
+		} else {
+			r += s1;
+		}
+	}
+
+	return r;
+}
+
+
