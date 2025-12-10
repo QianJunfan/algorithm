@@ -1,6 +1,6 @@
 /* Dec 11, 2025 
- * I've spent too much time writing my window manager and haven't gotten around
- * to doing any algorithmic problems.
+ * I've spent too much time writing my window manager 
+ * and haven't gotten around to doing any algorithmic problems.
  * That's a sin...
  * */
 
@@ -41,3 +41,26 @@ int romanToInt (char *s)
 }
 
 
+/* lc0014 - longest common prefix */
+#include <stdlib.h>
+#include <string.h>
+char *longestCommonPrefix(char **s, int size)
+{
+	char *r = strdup(s[0]); 	
+
+	for (int i = 1; i < size; i++) {
+		char *c = s[i];
+		char *m = r;
+		while (*m != '\0') {
+			if (*c == *m) {
+				c++;
+				m++;
+			} else {
+				*m = '\0';
+				break;
+			}
+		}
+	}
+
+	return r;
+}
