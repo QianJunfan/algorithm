@@ -9,6 +9,7 @@ Thu, Dec 11, 2025:
         lc0014 - longest common prefix 
         lc0020 - valid parentheses 
         lc0028 - find the index of the first occurrence in a string 
+        lc0028 - find the index of the ... (faster) 
 
 Sun, Dec 07, 2025:
         I'm trying to complete all the string-related LeetCode problems, 

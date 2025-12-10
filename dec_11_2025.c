@@ -92,7 +92,8 @@ bool isValid(char *s)
 
 
 /* lc0028 - find the index of the first occurrence in a string */
-int strStr(char *heystack, char *n) {
+int strStr(char *heystack, char *n) 
+{
 	if (*n == '\0')
 		return 0;
 
@@ -117,3 +118,38 @@ int strStr(char *heystack, char *n) {
 
 	return -1;
 }
+
+
+/* lc0028 - find the index of the ... (faster) */
+#include <stdint.h>
+
+int strStr(char *h, char *n)
+{
+	int idx[10000];	
+	int cnt = 0;
+	int lh = strlen(h);
+	int ln = strlen(n);
+	
+	if (ln == 0)
+		return 0;
+	if (lh < ln)
+		return -1;
+
+	for (int i = 0; i <= lh - ln; i++) {
+		if (h[i] == n[0] && h[i + ln - 1] == n[ln - 1])
+			idx[cnt++] = i;
+	}
+
+	for (int i = 0; i < cnt; i++) {
+		int start = idx[i];
+		int j = 0;
+		while (j < ln && h[start + j] == n[j])
+			j++;
+
+		if (j == ln)
+			return start;
+	}
+
+	return -1;
+}
+
