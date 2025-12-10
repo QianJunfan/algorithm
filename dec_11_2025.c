@@ -89,3 +89,31 @@ bool isValid(char *s)
 	
 	return p == 0 ? true : false;
 }
+
+
+/* lc0028 - find the index of the first occurrence in a string */
+int strStr(char *heystack, char *n) {
+	if (*n == '\0')
+		return 0;
+
+	char *h = heystack;
+	int idx = 0;
+
+	while (*h != '\0') {
+		char *th = h;
+		char *tn = n;
+
+		while (*th != '\0' && *tn != '\0' && *th == *tn) {
+			th++;
+			tn++;
+		}
+
+		if (*tn == '\0')
+			return idx;
+
+		h++;
+		idx++;
+	}
+
+	return -1;
+}
