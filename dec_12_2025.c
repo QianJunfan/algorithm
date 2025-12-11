@@ -55,3 +55,34 @@ char *addBinary(char *a, char *b)
 	else 
 		return r + 1;
 }
+
+
+/* lc0125 - valid palindrome */
+#include <string.h>
+#include <stdbool.h>
+#include <ctype.h>
+
+bool isPalindrome(char *s)
+{
+	if (s == NULL || *s == '\0')
+		return true;
+
+	char *l = s;
+	char *r = s + strlen(s) - 1;
+	
+	while (l < r) {
+		while (l < r && !isalnum(*l))
+			l++;
+		while (l < r && !isalnum(*r))
+			r--;
+		
+		if (l >= r)
+			break;
+
+		if (tolower(*l) != tolower(*r))
+			return false;
+		l++;
+		r--;
+	}
+	return true;
+}
