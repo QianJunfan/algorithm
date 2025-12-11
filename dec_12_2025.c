@@ -1,5 +1,4 @@
 /* Dec 12, 2025
- *
  * */
 
 /* lc0058 - length of last word */
