@@ -86,3 +86,29 @@ bool isPalindrome(char *s)
 	}
 	return true;
 }
+
+
+
+/* lc0168 - excel sheet column title */
+#include <string.h>
+#include <stdlib.h>
+
+char *convertToTitle(int n)
+{
+	char *r = (char *)malloc(8);
+	int idx = 0;
+	char tmp[8];
+
+	while (n > 0) {
+		n--;
+		int m = n % 26;
+		tmp[idx++] = 'A' + m;
+		n /= 26;
+	}
+
+	r[idx] = '\0';
+	for (int i = 0; i < idx; i++)
+		r[i] = tmp[idx - i - 1];
+
+	return r;
+}
