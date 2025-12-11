@@ -118,12 +118,19 @@ char *convertToTitle(int n)
 /* lc0168 - excel sheet column number */
 int titleToNumber(char *s)
 {
-	int r = 0;
+	long long r = 0;
 	for (int i =0; s[i] != '\0'; i++)
 		r = (r * 26) + s[i] - 'A' + 1;
-	return r;
+	return (int)r;
 }
 
-/* lc0168 - excel sheet column number
-            recursion */
+/* lc0168 - excel sheet column number (recursion) */
+int titleToNumber(char *s)
+{
+	if (*s == '\0')
+		return 0;
+	int rest = titleToNumber(s + 1);
+	int cur = *s - 'A' + 1;
+	return cur + 26 * rest;
+}
 
