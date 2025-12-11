@@ -125,7 +125,7 @@ int titleToNumber(char *s)
 }
 
 /* lc0168 - excel sheet column number (recursion) */
-int titleToNumber(char *s)
+int titleToNumber_r(char *s)
 {
 	if (*s == '\0')
 		return 0;
@@ -134,3 +134,54 @@ int titleToNumber(char *s)
 	return cur + 26 * rest;
 }
 
+
+
+/* lc0205 - isomorphic strings (failed) */
+#include <stdbool.h>
+#include <string.h>
+#include <stdio.h>
+
+bool isIsomorphic_f(char *s, char *t)
+{
+	int map[128] = {0};
+	for (int i = 0; s[i] != '\0'; i++)
+		map[s[i]] = t[i];
+	while (*s != '\0') {
+		printf("%c %c\n", *s, *t);
+		*s = map[*s];
+		printf("%c %c\n", *s, *t);
+		if (*(s) != *(t))
+			return false;
+		s++;
+		t++;
+	}
+
+	return true;
+}
+
+
+/* lc0205 - isomorphic strings */
+bool isIsomorphic(char *s, char *t)
+{
+	int map_s[128] = {0};
+	int map_t[128] = {0};
+	
+	while (*s != '\0') {
+		char cs = *s;
+		char ct = *t;
+		
+		if (map_s[cs] == 0) {
+			if (map_t[ct] != 0)
+				return false;
+
+			map_s[cs] = ct;
+			map_t[ct] = cs;
+		} else if (map_s[cs] != ct) {
+			return false;
+		}
+
+		s++;
+		t++;
+	}
+	return true;
+}
