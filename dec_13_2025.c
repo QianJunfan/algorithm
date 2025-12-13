@@ -74,3 +74,6 @@ bool isMatch(const char *s, const char *p)
 
 	return r;
 }
+
+/* this is a test */
+/* this is yet another test */
