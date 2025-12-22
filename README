@@ -21,3 +21,17 @@ Solve Problems & Study Algorithms
 Dec 22, 2025
  	LeetCode 0071 $ simplify path (in-place two-pointer)
  	LeetCode 0071 $ simplify path (stack)
+
+*	1. Iterate through the array.
+*	2. Compare adjacent elements.
+*	3. Swap them if they are in the wrong order.
+*	4. The largest element 'bubbles up' to its correct position.
+
+ 	Learn 1 $ bubble sorting
+
+*	The basic bubble sort always runs through all loops regardless
+*	of whether the array is sorted.
+*	By adding a flag, we can early exit if no swaps occur in a round,
+*	indicating the array is already sorted.
+
+ 	Learn 2 $ better bubble sorting

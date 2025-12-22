@@ -2,11 +2,12 @@
  * Dec 22, 2025
  */
 
+
 /* $ LeetCode 0071 $ simplify path (in-place two-pointer) */
 #include <string.h>
 #include <stdlib.h>
 
-char *simplifyPath(char *path)
+char *simplifyPath_it(char *path)
 {
 	int l = strlen(path);
 	char *s = malloc((l + 1) * sizeof(char));
@@ -57,7 +58,7 @@ char *simplifyPath(char *path)
 #include <string.h>
 #include <stdlib.h>
 
-char *simplifyPath(char *path)
+char *simplifyPath_s(char *path)
 {
 	int  n = strlen(path);
 	int  t = 0;
@@ -94,6 +95,96 @@ char *simplifyPath(char *path)
 
 	return r;
 }
+
+
+/* 1. Iterate through the array.
+ * 2. Compare adjacent elements.
+ * 3. Swap them if they are in the wrong order.
+ * 4. The largest element 'bubbles up' to its correct position.
+ */
+
+/* $ Learn 1 $ bubble sorting */
+void bubble_sort(int *arr, int n)
+{
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = 0; j < n - 1 - i; j++) {
+			if (arr[j] > arr[j + 1]) {
+				int tmp = arr[i];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tmp;
+			}
+		}
+	}
+}
+
+
+/* The basic bubble sort always runs through all loops regardless 
+ * of whether the array is sorted. 
+ * By adding a flag, we can early exit if no swaps occur in a round, 
+ * indicating the array is already sorted.
+ */
+
+/* $ Learn 2 $ better bubble sorting */
+void better_bubble_sort(int *arr, int n)
+{
+	for (int i = 0; i < n - 1; i++) {
+		int swapped = 0; // <-- the flag
+		for (int j = 0; j < n - 1 - i; j++) {
+			if (arr[j] > arr[i + 1]) {
+				int tmp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tmp;
+				swapped = 1;
+			}
+		}
+		if (swapped == 0)
+			break;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
