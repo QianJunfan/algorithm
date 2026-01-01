@@ -1,9 +1,9 @@
-/* Solve Problems & Study Algorithms
- * Dec 22, 2025
+/* Dec 22, 2025
+ * Solve Problems & Study Algorithms
  */
 
 
-/* $ LeetCode 0071 $ simplify path (in-place two-pointer) */
+/* $ leetcode 0071 $ simplify path (in-place two-pointer) */
 #include <string.h>
 #include <stdlib.h>
 
@@ -54,7 +54,7 @@ char *simplifyPath_it(char *path)
 
 
 
-/* $ LeetCode 0071 $ simplify path (stack) */
+/* $ leetcode 0071 $ simplify path (stack) */
 #include <string.h>
 #include <stdlib.h>
 
@@ -103,7 +103,7 @@ char *simplifyPath_s(char *path)
  * 4. The largest element 'bubbles up' to its correct position.
  */
 
-/* $ Learn 1 $ bubble sorting */
+/* $ learn 1 $ bubble sorting */
 void bubble_sort(int *arr, int n)
 {
 	for (int i = 0; i < n - 1; i++) {
@@ -124,7 +124,7 @@ void bubble_sort(int *arr, int n)
  * indicating the array is already sorted.
  */
 
-/* $ Learn 2 $ better bubble sorting */
+/* $ learn 2 $ better bubble sorting */
 void better_bubble_sort(int *arr, int n)
 {
 	for (int i = 0; i < n - 1; i++) {
