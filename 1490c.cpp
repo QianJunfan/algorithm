@@ -1,4 +1,4 @@
-/* codeforces 1940c - sum of cubes
+/* codeforces 1490c - sum of cubes
  * Jan 18, 2026
  */
 #include <bits/stdc++.h>

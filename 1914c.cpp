@@ -1,6 +1,8 @@
 /* codeforces 1914c - quests
  * Jan 18, 2026
  */
+
+/* hash map */
 #include <bits/stdc++.h>
 
 using namespace std;

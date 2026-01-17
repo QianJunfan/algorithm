@@ -14,8 +14,12 @@ cat <<EOF >"${pid_lower}.cpp"
  * ${curr_date}
  */
 #include <bits/stdc++.h>
-
 using namespace std;
+
+typedef long long ll;
+
+#define _YES cout << "YES" << "\n"
+#define _NO  cout << "NO"  << "\n"
 
 int main(void)
 {
