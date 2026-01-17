@@ -4,8 +4,10 @@ miniutils:
         sc.py: A tool for generating activity logs and heatmaps.
         build.sh: A script for generating C++ solution templates.
         push.sh: A utility script for quick Git pushes.
-Activity log and heatmap provided by sc.py.
 
+
+
+Activity log and heatmap provided by sc.py.
 
         Sun ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ▓
         Mon ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ ░ *
