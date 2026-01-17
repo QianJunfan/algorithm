@@ -44,7 +44,7 @@ def glyph(n, ftr):
     return "*" if ftr else "░▒▓█"[(n > 0) + (n > 3) + (n > 8)]
 
 def run():
-    print("Activity log and heatmap provided by sc.py.\n\n")
+    print("Activity log and heatmap provided by sc.py.\n")
     db, td = get_db(), datetime.now().date()
     cnts = {k: len(v) for k, v in db.items()}
     
