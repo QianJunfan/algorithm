@@ -42,5 +42,6 @@ case $editor in
 vim) vim "${pid_lower}.cpp" ;;
 code) code "${pid_lower}.cpp" ;;
 nano) nano "${pid_lower}.cpp" ;;
+nvim) nvim "${pid_lower}.cpp" ;;
 *) echo "Done." ;;
 esac
