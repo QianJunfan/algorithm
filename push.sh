@@ -20,8 +20,9 @@ fi
 commit_message="$current_date
 
 $file_list"
-
-python sc.py > README
+rm -f README
+echo HEAD >>README
+python sc.py >>README
 git commit -m "$commit_message"
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 git push origin "$current_branch"
