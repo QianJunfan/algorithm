@@ -1,5 +1,5 @@
 /* codeforces 1520d - same differences
- * jan 18, 2026
+ * Jan 18, 2026
  */
 #include <bits/stdc++.h>
 using namespace std;
